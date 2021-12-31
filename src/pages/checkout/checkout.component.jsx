@@ -34,7 +34,7 @@ const CheckoutPage = ({ cartItems, cartTotal }) => (
     )
   }
   <div className="total">
-    <span>Total: ${cartTotal}</span>
+    <span>Total: ${cartTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
   </div>
   <StripeCheckoutButton price={cartTotal}/>
  </div> 
